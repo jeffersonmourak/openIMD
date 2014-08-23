@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<polymer-element name="open-imd" attributes="lugar">
+    <template>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+			<style>
+				img{
+				  height: 100px;
+				}
+				div{
+				  font-family: 'Roboto', sans-serif;
+				  font-size: 30px;
+				  width: 350px;
+				  background-color: #FF4000;
+				  font-style: normal;
+				  font-weight: 100;
+				  color:#fff;
+				  padding: 10px;
+				  text-align: center;
+				  border-radius: 3px;
+				}
+				.info{
+				  font-style: normal;
+				  font-weight: 400;
+				}
+				input{
+				  font-style: normal;
+				  font-weight: 400;
+				  padding: 5px;
+				  border:none;
+				  border-bottom-style: solid;
+				  border-bottom-color:#bdbdbd;
+				  border-bottom-width: 1px;
+				  background-color: transparent;
+				  color:#fff;
+				}
+				select{
+				  font-style: normal;
+				  font-weight: 400;
+				  padding: 5px;
+				  border:none;
+				  border-bottom-style: solid;
+				  border-bottom-color:#bdbdbd;
+				  border-bottom-width: 1px;
+				  background-color: transparent;
+				  color:#fff;
+				}
+				button{
+				  font-style: normal;
+				  font-weight: 400;
+				  padding: 5px;
+				  border:none;
+				  border-bottom-style: solid;
+				  border-bottom-color:#bdbdbd;
+				  border-bottom-width: 1px;
+				  background-color: transparent;
+				  color:#fff;
+				  border-top-left-radius: 5px;
+				  border-top-right-radius: 5px;
+				}
+				button:hover{
+				  background-color: #B43104;
+				}
+				button:active{
+				  background-color: #61210B;
+				}
+			</style>
+			<div>
+				<img src="../img/oi.png"><br>
+				<p>você está {{complemento}}<span class='info'><br> {{lugar}}</span></p>
+				<select value='{{selectVal}}'>
+					<option selected>no</option>
+					<option>na</option>
+					<option>em</option>
+				</select>
+				<input id='place' type="text" value="{{value}}"> <button on-tap="{{add}}">Mudar</button>
+			</div>
+    </template>
+    <script>
+      Polymer('open-imd', {
+        lugar : "CIVT - Metrópole Digital",
+        complemento : "no",
+        add : function(){
+			this.lugar = this.value;
+			this.complemento = this.selectVal;
+        }
+      });
+    </script>
+  </polymer-element>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "openIMD",
+  "version": "1.0.1",
+  "authors": [
+    "J3Fire <jefinho.moura14@gmail.com>"
+  ],
+  "description": "Custom Element",
+  "keywords": [
+    "web-components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.5"
+  }
+}

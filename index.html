@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Polymer</title>
+  <script src='../bower_components/platform/platform.js'></script>
+
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+</head>
+<body>
+  <link rel="import" href="openIMD.html">
+  <open-imd></open-imd>
+  <div>
+    <img src="../img/oi.png"><br>
+    <p>você está {{complemento}}<span class='info'><br>{{lugar}}</span></p>
+    <select value='{{selectVal}}'>
+      <option selected>no</option>
+      <option>na</option>
+      <option>em</option>
+    </select>
+    <input id='place' type="text" value="{{value}}"> <button on-tap="{{add}}">Mudar</button>
+    </div>
+</body>
+</html>
